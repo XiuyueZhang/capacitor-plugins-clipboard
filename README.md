@@ -1,11 +1,11 @@
-# yue-flashlight
+# yue-clipboard
 
-Flashlight Control Plugin - Allows your web app to turn the device's flashlight on or off, and check if a flashlight is available.
+Clipboard Control Plugin - Allows your web app to access clipboard and can read/write or clear the clipboard.
 
 ## Install
 
 ```bash
-npm install yue-flashlight
+npm install yue-clipboard
 npx cap sync
 ```
 
