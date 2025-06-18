@@ -2,27 +2,27 @@
 import PackageDescription
 
 let package = Package(
-    name: "YueFlashlight",
+    name: "YueClipboard",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "YueFlashlight",
-            targets: ["YueFlashlightPlugin"])
+            name: "YueClipboard",
+            targets: ["YueClipboardPlugin"])
     ],
     dependencies: [
         .package(url: "https://github.com/ionic-team/capacitor-swift-pm.git", from: "7.0.0")
     ],
     targets: [
         .target(
-            name: "YueFlashlightPlugin",
+            name: "YueClipboardPlugin",
             dependencies: [
                 .product(name: "Capacitor", package: "capacitor-swift-pm"),
                 .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
-            path: "ios/Sources/YueFlashlightPlugin"),
+            path: "ios/Sources/YueClipboardPlugin"),
         .testTarget(
-            name: "YueFlashlightPluginTests",
-            dependencies: ["YueFlashlightPlugin"],
-            path: "ios/Tests/YueFlashlightPluginTests")
+            name: "YueClipboardPluginTests",
+            dependencies: ["YueClipboardPlugin"],
+            path: "ios/Tests/YueClipboardPluginTests")
     ]
 )

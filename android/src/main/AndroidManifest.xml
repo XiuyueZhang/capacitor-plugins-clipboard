@@ -1,2 +1,3 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Clipboard operations require no special permissions on Android -->
 </manifest>

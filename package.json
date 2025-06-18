@@ -1,7 +1,7 @@
 {
-  "name": "yue-flashlight",
+  "name": "yue-clipboard",
   "version": "0.0.1",
-  "description": "Flashlight Control Plugin - Allows your web app to turn the device's flashlight on or off, and check if a flashlight is available.",
+  "description": "Clipboard Management Plugin - Provides comprehensive clipboard operations including text, image, and URL handling for your web app.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -13,25 +13,31 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "YueFlashlight.podspec"
+    "YueClipboard.podspec"
   ],
   "author": "yue-zhang",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XiuyueZhang/capacitor-plugins-flashlight.git.git"
+    "url": "git+https://github.com/XiuyueZhang/capacitor-plugins-clipboard.git"
   },
   "bugs": {
-    "url": "https://github.com/XiuyueZhang/capacitor-plugins-flashlight.git/issues"
+    "url": "https://github.com/XiuyueZhang/capacitor-plugins-clipboard/issues"
   },
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "native",
+    "clipboard",
+    "copy",
+    "paste",
+    "text",
+    "image",
+    "url"
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild -scheme YueFlashlight -destination generic/platform=iOS",
+    "verify:ios": "xcodebuild -scheme YueClipboard -destination generic/platform=iOS",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -39,7 +45,7 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\" --plugin=prettier-plugin-java",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api YueFlashlightPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api YueClipboardPlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.mjs",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",

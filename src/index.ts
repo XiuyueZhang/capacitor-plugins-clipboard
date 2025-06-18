@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { YueFlashlightPlugin } from './definitions';
+import type { YueClipboardPlugin } from './definitions';
 
-const YueFlashlight = registerPlugin<YueFlashlightPlugin>('YueFlashlight', {
-  web: () => import('./web').then((m) => new m.YueFlashlightWeb()),
+const YueClipboard = registerPlugin<YueClipboardPlugin>('YueClipboard', {
+  web: () => import('./web').then((m) => new m.YueClipboardWeb()),
 });
 
 export * from './definitions';
-export { YueFlashlight };
+export { YueClipboard };
